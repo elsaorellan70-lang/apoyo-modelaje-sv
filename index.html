@@ -26,13 +26,17 @@
             height: 100vh; 
             margin: 0; 
         }
-        .login-box { 
+               .login-box { 
             background: white; 
             padding: 30px; 
             border-radius: 10px; 
             box-shadow: 0 0 10px rgba(0,0,0,0.1); 
             text-align: center; 
-            width: 300px; 
+            
+            /*  CAMBIO PARA QUE SE VEA BIEN EN EL TELÉFONO 👇 */
+            width: 90%;        /* En el celular usará el 90% del ancho de la pantalla */
+            max-width: 300px;  /* En la PC no se pasará de los 300px que tú querías */
+            /* 👆 FIN DEL CAMBIO 👆 */
         }
         .logo-img { 
             width: 80px; 
