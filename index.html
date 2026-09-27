@@ -27,6 +27,7 @@
             margin: 0; 
         }
                      /* ESTO ES PARA LA COMPUTADORA (Se queda igual que tú lo hiciste) */
+               /* ESTO ES PARA LA COMPUTADORA (Tu diseño original intacto) */
         .login-box { 
             background: white; 
             padding: 30px; 
@@ -36,14 +37,15 @@
             width: 300px; 
         }
 
-        /* 👇 ESTO ES NUEVO: SOLO AFECTA A CELULARES 👇 */
-        @media (max-width: 480px) {
+        /* 👇 ESTO ES SOLO PARA EL CELULAR 👇 */
+        @media (max-width: 600px) {
             .login-box {
-                width: 90%;       /* En el cel usa el 90% del ancho de la pantalla */
-                max-width: 400px; /* Le permitimos crecer un poquito más que 300px */
+                width: 90%;         /* La caja ocupa casi toda la pantalla */
+                max-width: 400px;   /* Pero no se pasa de 400px */
+                padding: 20px;      /* Reducimos el relleno para que el texto tenga más espacio */
             }
         }
-        /* 👆 FIN DEL CÓDIGO NUEVO  */
+        /* 👆 FIN DEL CÓDIGO 👆 */
         
         .logo-img { 
             width: 80px; 
