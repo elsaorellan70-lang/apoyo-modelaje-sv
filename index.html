@@ -26,18 +26,25 @@
             height: 100vh; 
             margin: 0; 
         }
-               .login-box { 
+                     /* ESTO ES PARA LA COMPUTADORA (Se queda igual que tú lo hiciste) */
+        .login-box { 
             background: white; 
             padding: 30px; 
             border-radius: 10px; 
             box-shadow: 0 0 10px rgba(0,0,0,0.1); 
             text-align: center; 
-            
-            /*  CAMBIO PARA QUE SE VEA BIEN EN EL TELÉFONO 👇 */
-            width: 90%;        /* En el celular usará el 90% del ancho de la pantalla */
-            max-width: 300px;  /* En la PC no se pasará de los 300px que tú querías */
-            /* 👆 FIN DEL CAMBIO 👆 */
+            width: 300px; 
         }
+
+        /* 👇 ESTO ES NUEVO: SOLO AFECTA A CELULARES 👇 */
+        @media (max-width: 480px) {
+            .login-box {
+                width: 90%;       /* En el cel usa el 90% del ancho de la pantalla */
+                max-width: 400px; /* Le permitimos crecer un poquito más que 300px */
+            }
+        }
+        /* 👆 FIN DEL CÓDIGO NUEVO  */
+        
         .logo-img { 
             width: 80px; 
             height: 80px; 
